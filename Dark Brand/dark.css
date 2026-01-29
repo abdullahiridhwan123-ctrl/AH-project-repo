@@ -1,0 +1,616 @@
+html{
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+:root{
+    color-scheme: light dark;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+.inter-Semi {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+}
+
+body{
+    margin: 0;
+    font-family: "Inter", sans-serif;
+    min-height: 100vh;
+    background-color: light-dark(#f3fafa, #000000);
+    overflow: hidden;
+    overflow-y: scroll;
+    cursor: url("media/chrome_cursor.png"), auto;
+}
+
+a, div, button{
+    cursor: url("media/chrome_cursor.png"), auto;
+}
+
+footer{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.section-ctn{
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 9%;
+}
+
+#lg-text-ctn{
+    position: relative;
+    width: 60%;
+    animation: slideInLeft 0.8s cubic-bezier(0.215, 0.610, 0.355, 1) 0.2s;
+}
+
+h2.title-txt{
+    color: light-dark(#000000, #f3fafa);
+    font-size: 5rem;
+    font-weight: 800;
+    font-style: oblique;
+    position: relative;
+}
+
+h2.title-txt::after{
+    content: "";
+    position: absolute;
+    width: 2%;
+    height: 15%;
+    background-image: linear-gradient(to top,rgb(224, 16, 16),rgb(19, 19, 216));
+    top: 0;
+}
+
+p.title-p{
+    color: light-dark(#000000, #f3fafa);
+    font-size: 1.125rem;
+    font-weight: 400;
+}
+
+.left-slide-logo{
+    width: 25%;
+}
+
+.left-slide-logo img{
+    position: relative;
+    width: 100%;
+    height: 90%;
+    z-index: -2;
+    animation: slideIn 0.8s cubic-bezier(0.215, 0.610, 0.355, 1) 0.2s;
+}
+
+/* ------Navigation------ */
+@property --angle{
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+nav{
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav a{
+    color: light-dark(#000000, #f3fafa);
+    text-decoration: none;
+}
+
+#nav-logo{
+    position: relative;
+    width: max-content;
+    padding: 10px;
+    margin-right: 30px;
+    border-radius: 50%;
+    background-color: light-dark(#f3fafa, #000000);
+}
+
+#nav-logo::after, #nav-logo::before, .user-icon::after, .user-icon::before, .cart-icon::after, .cart-icon::before, .logout-icon::after, .logout-icon::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 101%;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    padding: 2px;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+#nav-logo:hover::after, .user-icon:hover::after, .cart-icon:hover::after, .logout-icon:hover::after{
+    background-image: conic-gradient(from var(--angle), transparent 70%, blue, red);
+    animation: glowSpin 1.5s linear infinite;
+}
+
+#nav-logo:hover::before, .user-icon:hover::before, .cart-icon:hover::before, .logout-icon:hover::before{
+    background-image: conic-gradient(from var(--angle), transparent 70%, blue, red);
+    animation: glowSpin 1.5s linear infinite;
+    filter: blur(5px);
+}
+
+.nav_btn{
+    padding: 10px 16px;
+    font-weight: 800;
+    width: max-content;
+    position: relative;
+}
+
+.nav_btn::after, .product-ctn-button::after{
+    content: "";
+    background: linear-gradient(to right, rgb(224, 16, 16), rgb(19, 19, 216));
+    position: absolute;
+    height: 4%;
+    width: 0;
+    bottom: 0;
+    left: 0;
+    transition: 0.3s;
+}
+
+.nav_btn:hover::after, .product-ctn-button:hover::after{
+    width: 100%;
+}
+
+.nav-right-ctn{
+    color: light-dark(#000000, #f3fafa);
+    display: flex;
+    padding: 5px;
+    padding-right: 0;
+    margin-right: 20px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.nav-right-ctn .icon{
+    display: none;
+}
+
+.user-icon, .cart-icon, .logout-icon, .menu-bar{
+    padding: 10px;
+    margin: 1px;
+    width: max-content;
+    position: relative;
+    border-radius: 50%;
+    color: light-dark(#000000, #f3fafa);
+    background-color: light-dark(#f3fafa, #000000);
+    cursor: url("media/chrome_cursor.png"), auto;
+}
+
+.menu-bar{
+    padding: 0px;
+}
+
+#second-sec{
+    padding: 20px;
+    width: 100vw;
+    height: auto;
+}
+
+#second-sec h1{
+    text-align: center;
+    font-size: 2.625rem;
+    margin: 0 0 5% 0 ;
+}
+
+#product-section{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.product-ctn{
+    width: 25%;
+    background-color: light-dark(#f3fafa, #000000);
+    box-shadow: 0px 0px 7px 1px rgba(45, 57, 68, 0.05);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.product-ctn img{
+    width: 75%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.prod-desc{
+    width: 75%;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.price-desc{
+    width: 75%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.prod-title, .prod-col, .prod-price{
+    color: light-dark(#000000, #f3fafa);
+    margin: 5px 0;
+}
+
+.prod-title{
+    font-weight: 700;
+    font-size: 1.25rem;
+}
+
+.prod-col{
+    font-weight: 300;
+    font-size: 1rem;
+}
+
+.prod-price{
+    font-weight: 700;
+    font-size: 1.125rem;
+}
+
+.product-ctn-button{
+    text-align: center;
+    padding: 4.5% 11.5%;
+    width: max-content;
+    position: relative;
+    background-color: light-dark(#f3fafa, #000000);
+    display: inline-block;
+    text-decoration: none;
+    color: light-dark(#000000, #f3fafa);
+    border: 1px solid light-dark(#000000, #f3fafa);
+}
+
+.sec-scroll-btn{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    background-color: light-dark(#f3fafa, #000000);
+}
+
+.sec-scroll-btn i{
+    width: 100px;
+    height: 100px;
+    color: light-dark(#000000, #f3fafa);
+}
+
+.login-form {
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+}
+
+#login-ctn {
+    display: flex;
+    flex-flow: column;
+    width: 400px;
+    max-width: 95%;
+    background-color: light-dark(#f3fafa, #000000);
+    box-shadow: 0px 0px 7px 1px rgba(45, 57, 68, 0.05);
+    border-radius: 5px;
+    margin: 60px auto;
+    padding: 35px;
+}
+
+#login-ctn h1{
+    text-align: center;
+    font-size: 48px;
+    margin:  0px 0px 32.16px 0px;
+}
+
+.login-form .form-group {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    transition: all 0.1s linear;
+}
+.login-form .form-group .form-icon-left, .login-form .form-group .form-icon-right {
+    fill: light-dark(#f3fafa, #000000);
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%;
+}
+
+.show-pass-btn {
+    z-index: 2;
+    fill: light-dark(#f3fafa, #000000);
+    position: absolute;
+    transform: translateX(50%);
+    left: 95%;
+    transition: all 0.1s linear;
+}
+
+.login-form .form-group .form-icon-left {
+    left: 5%;
+}
+.login-form .form-group .form-icon-left + .form-input {
+    padding-left: 60px;
+}
+.login-form .form-group .form-icon-right {
+    right: 0;
+}
+.login-form .form-group .form-icon-right + .form-input {
+    padding-right: 50px;
+}
+.login-form .form-group:focus-within .form-icon-left {
+    fill: #f3fafa;
+}
+.login-form .form-input {
+    margin: 5% auto;
+    width: 100%;
+    height: 43px;
+    border: 1px solid #a8a9ab;
+    padding: 0 15px;
+    border-radius: 50px;
+    color: light-dark(#000000, #f3fafa);
+    font-size: 14px;
+    transition: all 0.1s ease-in-out;
+}
+
+.login-form .form-input::placeholder {
+    font-size: 14px;
+    color: light-dark(#8c8a8a, #c0c0c0);
+}
+.login-form .form-link {
+    color: light-dark(#000000, #f3fafa);
+    font-weight: 500;
+    text-decoration: underline;
+    font-size: 14px;
+}
+.login-form .form-link:hover {
+    text-decoration: none;
+}
+.login-form p.register-link {
+    text-align: center;
+    margin: 0;
+    padding: 20px 0 0 0;
+    font-size: 14px;
+    color: #6b7179;
+}
+.sub_btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    appearance: none;
+    cursor: pointer;
+    border: 0;
+    background-color: light-dark(#000000,#f3fafa);
+    color: light-dark(#f3fafa,#000000);
+    padding: 21px 14px;
+    font-size: 14px;
+    font-weight: 600;
+    margin: 5% 20%;
+    border-radius: 50px;
+    height: 40px;
+    box-shadow: 0px 0px 6px 1px rgba(45, 57, 68, 0.1);
+}
+.sub_btn:hover {
+    background-color: light-dark(#00000093, #f3fafa93);
+}
+
+.sub_btn:active{
+    animation: btnPress 0.08s ease-in-out;
+    background-color: light-dark(#000000,#f3fafa);
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #1f1c1c;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/* ---------------------- */
+
+/* -----Animations------ */
+
+@keyframes glowSpin{
+    from{
+        --angle:0deg;
+    }
+    to{
+        --angle:360deg;
+    }
+}
+
+@keyframes slideIn{
+    0%{
+        transform: rotateZ(120deg);
+        right: 100vw;
+    }
+    100%{
+        transform: rotateZ(0deg);
+        right: 0;
+    }
+}
+
+@keyframes slideInLeft{
+    0%{
+        left: 100vw;
+    }
+    100%{
+        left: 0;
+    }
+}
+
+@keyframes btnPress{
+    0% {transform: scale(1);}
+    50% {transform: scale(1.1);}
+    100% {transform: scale(1);}
+}
+/* ---------------------- */
+
+/* ------Sections------ */
+
+#first-sec{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.vid_ctn{
+    width: 33%;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    margin: 5% 0 0 0;
+    background-color: light-dark(#000000, #f3fafa);
+    color: light-dark(#f3fafa, #000000);
+}
+
+/* ---------------------- */
+
+.overlay {
+    /* Height & width depends on how you want to reveal the overlay */   
+    height: 100%;
+    width: 0;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    background-color: light-dark(#f3fafa, #000000);
+    overflow-x: hidden; /* Disable horizontal scroll */
+    transition: 0.3s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
+
+/* Position the content inside the overlay */
+.overlay-content {
+    position: relative;
+    top: 10%; /* 25% from the top */
+    width: 100%; /* 100% width */
+    text-align: left; /* Centered text/links */
+    margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+}
+
+/* The navigation links inside the overlay */
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    color: light-dark(#000000, #f3fafa);
+    display: block; /* Display block instead of inline */
+    transition: 0.1s; /* Transition effects on hover (color) */
+}
+
+.overlay-content a{
+    width: 100%;
+    border-top: 1px solid rgba(133, 120, 120, 0.795);
+}
+
+/* When you mouse over the navigation links, change their color */
+.overlay a:hover, .overlay a:focus {
+    color: light-dark(rgba(0, 0, 0, 0.8), rgba(255, 255, 255, 0.8));
+}
+
+/* Position the close button (top right corner) */
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+}
+
+.gallery{
+    padding: 5px;
+    columns: 300px;
+}
+
+.gallery div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 5px;
+    margin-bottom: 1em;
+}
+
+#new1, #new5, #new3{
+    background-color: aqua;
+    width: 300px;
+    height: 300px;
+}
+
+#new2, #new6{
+    background-color: brown;
+    width: 450px;
+    height: 400px;
+}
+
+#new4, #new7{
+    background-color: lightgreen;
+    width: 350px;
+    height: 450px;
+}
+
+
+
+/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+@media screen and (max-height: 450px) {
+.overlay a {font-size: 20px}
+.overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+}
+}
+
+@media screen and (max-width: 768px) {
+    #nav-right {display: none;}
+    .sec-scroll-btn{
+        visibility: hidden;
+    }
+    nav{
+        padding: 5px 3px;
+    }
+    #nav-logo {
+        margin-left: 5px;
+    }
+    .nav-right-ctn a.icon {
+        display: block;
+        padding: 10px;
+    }
+    .section-ctn{
+        flex-direction: column;
+    }
+    .left-slide-logo img{
+        display: none;
+    }
+    h2.title-txt{
+        font-size: 52px;
+    }
+    p.title-p{
+        font-size: 16px;
+    }
+    #login-ctn{
+        margin: 100px auto;
+    }
+    .product-ctn{
+        width: 50%;
+    }
+    #second-sec h1{
+        font-size: 32px;
+    }
+    .price-desc{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
