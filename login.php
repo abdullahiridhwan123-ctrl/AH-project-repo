@@ -108,7 +108,7 @@ if (isset($_SESSION['account_loggedin'])) {
         </form>
     </div>
     
-    <script src="/Dark Brand/dark.js"></script>
+    <script src="dark.js"></script>
 </body>
 </html>
 
