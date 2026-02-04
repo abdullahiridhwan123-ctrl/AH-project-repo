@@ -158,7 +158,7 @@ if (!isset($_SESSION['account_loggedin'])) {
     </div>
 
     <footer>
-        <div class="foot_links_left">
+        <div class="foot-ctn-right">
             <ul>
                 <li><a href="#"></a>1</li>
                 <li><a href="#"></a>2</li>
@@ -171,7 +171,7 @@ if (!isset($_SESSION['account_loggedin'])) {
             </ul>
         </div>
 
-        <div class="foot_bottom">
+        <div class="foot-ctn-left">
             <div class="socials">
                 <a href="#"><i class="fab fa-tiktok fa-lg"></i></a>
                 <a href="#"><i class="fab fa-instagram fa-lg"></i></a>
