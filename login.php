@@ -106,7 +106,7 @@ if (isset($_SESSION['account_loggedin'])) {
                 <p class="register-link">Don't have an account? <a href="register.php" class="form-link">Create one</a></p>
         </form>
     </div>
-    <script src="/Other/dark.js"></script>
+    <script src="dark.js"></script>
 </body>
 </html>
 
