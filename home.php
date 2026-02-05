@@ -81,7 +81,7 @@ if (!isset($_SESSION['account_loggedin'])) {
         <section id="first-sec">
             <div class="section-ctn">
                 <div id="lg-text-ctn">
-                    <h2 class="title-txt">SPECIFICS</h2>
+                    <h2 class="title-txt">DYNAMIX</h2>
                     <p class="title-p">
                         Welcome back, <?=htmlspecialchars($_SESSION['account_name'], ENT_QUOTES)?>! <br>
                         This is the home page. You are logged in!
@@ -158,27 +158,44 @@ if (!isset($_SESSION['account_loggedin'])) {
     </div>
 
     <footer>
-        <div class="foot-ctn-right">
-            <ul>
-                <li><a href="#"></a>1</li>
-                <li><a href="#"></a>2</li>
-                <li><a href="#"></a>3</li>
-                <li><a href="#"></a>4</li>
-                <li><a href="#"></a>5</li>
-                <li><a href="#"></a>6</li>
-                <li><a href="#"></a>7</li>
-                <li><a href="#"></a>8</li>
-            </ul>
-        </div>
-
-        <div class="foot-ctn-left">
-            <div class="socials">
-                <a href="#"><i class="fab fa-tiktok fa-lg"></i></a>
-                <a href="#"><i class="fab fa-instagram fa-lg"></i></a>
-                <a href="#"><i class="fab fa-youtube fa-lg"></i></a>
-                <a href="#"><i class="fab fa-twitter fa-lg"></i></a>
-                <a href="#"><i class="fab fa-discord fa-lg"></i></i></a>
+        <div class="footer-top-section">
+            <div class="footer-ctn">
+                <h3 class="footer-title">Shop</h3>
+                <a href="#">All</a>
+                <a href="#">Accessories</a>
+                <a href="#">Outerwear</a>
+                <a href="#">Sale</a>
+                <a href="#">Gift Card</a>
             </div>
+
+            <div class="footer-ctn">
+                <h3 class="footer-title">Helpful Links</h3>
+                <a href="#">FAQ</a>
+                <a href="#">Shipping & Returns</a>
+                <a href="#">Size Guide</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms & Conditions</a>
+            </div>
+
+            <div class="footer-ctn">
+                <h3 class="footer-title">Contact Us</h3>
+                <p class="footer-p">Email: contact@dynamix.com</p>
+                <div class="socials">
+                    <a href="#"><i class="fab fa-tiktok fa-lg"></i></a>
+                    <a href="#"><i class="fab fa-instagram fa-lg"></i></a>
+                    <a href="#"><i class="fab fa-youtube fa-lg"></i></a>
+                    <a href="#"><i class="fab fa-twitter fa-lg"></i></a>
+                    <a href="#"><i class="fab fa-discord fa-lg"></i></a>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="footer-logo">
+            <div>
+                <h2 class="title-txt-alt">DYNAMIX</h2>
+            </div>
+            <p class="copyright-p">© 2026 DYNAMIX. All rights reserved.</p>
         </div>
     </footer>
 

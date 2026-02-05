@@ -76,7 +76,7 @@ if (isset($_SESSION['account_loggedin'])) {
         <section id="first-sec">
             <div class="section-ctn">
                 <div id="lg-text-ctn">
-                    <h2 class="title-txt">SPECIFICS</h2>
+                    <h2 class="title-txt">DYNAMIX</h2>
                     <p class="title-p">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ipsum sapien, volutpat a dictum sed, imperdiet quis libero.
                     </p>

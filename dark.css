@@ -50,7 +50,7 @@ footer{
     animation: slideInLeft 0.8s cubic-bezier(0.215, 0.610, 0.355, 1) 0.2s;
 }
 
-h2.title-txt{
+h2.title-txt, h2.title-txt-alt{
     color: light-dark(#000000, #f3fafa);
     font-size: 5rem;
     font-weight: 800;
@@ -58,7 +58,11 @@ h2.title-txt{
     position: relative;
 }
 
-h2.title-txt::after{
+h2.title-txt-alt{
+    color: light-dark(#f3fafa,#000000);
+}
+
+h2.title-txt::after, h2.title-txt-alt::after{
     content: "";
     position: absolute;
     width: 2%;
@@ -472,9 +476,46 @@ hr {
 
 footer {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: space-evenly;
     margin: 5% 0 0 0;
     background-color: light-dark(#000000, #f3fafa);
+    color: light-dark(#f3fafa, #000000);
+}
+
+.footer-top-section{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+}
+
+footer a{
+    display: block;
+    color: light-dark(#f3fafa, #000000);
+    text-decoration: none;
+}
+
+footer a:hover{
+    text-decoration: underline;
+}
+
+.footer-title{
+    font-size: 1.275rem;
+    font-weight: 700;
+}
+
+.footer-p{
+    font-style: italic;
+}
+
+.footer-logo{
+    margin: 0 auto;
+}
+
+.socials a{
+    display: inline-block;
+    margin: 0 10px;
     color: light-dark(#f3fafa, #000000);
 }
 
