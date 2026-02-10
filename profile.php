@@ -129,30 +129,48 @@ $stmt->close();
         </section>
     </div>
 
-    <!-- <footer>
-        <div class="foot_links_left">
-            <ul>
-                <li><a href="#"></a>1</li>
-                <li><a href="#"></a>2</li>
-                <li><a href="#"></a>3</li>
-                <li><a href="#"></a>4</li>
-                <li><a href="#"></a>5</li>
-                <li><a href="#"></a>6</li>
-                <li><a href="#"></a>7</li>
-                <li><a href="#"></a>8</li>
-            </ul>
+    <footer>
+        <div class="footer-top-section">
+            <div class="footer-ctn">
+                <h3 class="footer-title">Shop</h3>
+                <a href="#">All</a>
+                <a href="#">Accessories</a>
+                <a href="#">Outerwear</a>
+                <a href="#">Sale</a>
+                <a href="#">Gift Card</a>
+            </div>
 
-            <div class="foot_bottom">
+            <div class="footer-ctn">
+                <h3 class="footer-title">Helpful Links</h3>
+                <a href="#">FAQ</a>
+                <a href="#">Shipping & Returns</a>
+                <a href="#">Size Guide</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms & Conditions</a>
+            </div>
+
+            <div class="footer-ctn">
+                <h3 class="footer-title" style="margin-top: 0;">Contact Us</h3>
+                <p class="footer-p">Email: contact@dynamix.com</p>
                 <div class="socials">
                     <a href="#"><i class="fab fa-tiktok fa-lg"></i></a>
                     <a href="#"><i class="fab fa-instagram fa-lg"></i></a>
                     <a href="#"><i class="fab fa-youtube fa-lg"></i></a>
                     <a href="#"><i class="fab fa-twitter fa-lg"></i></a>
-                    <a href="#"><i class="fab fa-discord fa-lg"></i></i></a>
+                    <a href="#"><i class="fab fa-discord fa-lg"></i></a>
                 </div>
             </div>
         </div>
-    </footer> -->
+        
+
+        <div class="footer-logo">
+            <div>
+                <h2 class="title-txt-alt">DYNAMIX</h2>
+            </div>
+            
+        </div>
+        <p class="copyright-p">© 2026 DYNAMIX. All rights reserved.</p>
+    </footer>
 
     <script src="dark.js"></script>
 </body>

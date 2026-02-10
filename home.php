@@ -178,7 +178,7 @@ if (!isset($_SESSION['account_loggedin'])) {
             </div>
 
             <div class="footer-ctn">
-                <h3 class="footer-title">Contact Us</h3>
+                <h3 class="footer-title" style="margin-top: 0;">Contact Us</h3>
                 <p class="footer-p">Email: contact@dynamix.com</p>
                 <div class="socials">
                     <a href="#"><i class="fab fa-tiktok fa-lg"></i></a>
@@ -195,8 +195,9 @@ if (!isset($_SESSION['account_loggedin'])) {
             <div>
                 <h2 class="title-txt-alt">DYNAMIX</h2>
             </div>
-            <p class="copyright-p">© 2026 DYNAMIX. All rights reserved.</p>
+            
         </div>
+        <p class="copyright-p">© 2026 DYNAMIX. All rights reserved.</p>
     </footer>
 
     <script src="dark.js"></script>

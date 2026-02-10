@@ -27,3 +27,19 @@ function showPassword() {
         pword.type = "password";
     }
 }
+
+function toggleAccordion() {
+    var accBtn = document.getElementsByClassName("footer-accordion-btn");
+    for (let i = 0; i < accBtn.length; i++) {
+        accBtn[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            let panel = this.nextElementSibling;
+            if (panel.style.maxHeight) {
+                panel.style.maxHeight = null;
+            }
+            else {
+                panel.style.maxHeight = panel.scrollHeight + "px";
+            }
+        });
+    }
+}
