@@ -99,13 +99,13 @@ if (!isset($_SESSION['account_loggedin'])) {
             <h1>New Drop Pre-order</h1>
             <div id="product-section">
                 <div class="product-ctn">
-                    <img src="media/Fire force cross.jpg" alt="Fire force Cross">
+                    <img src="media/Fire force cross - Red.jpg" alt="Fire force Cross">
                     <div class="prod-desc">
-                        <div class="prod-title"> Fire Force Zip Shirt</div>
-                        <div class="prod-col">Black/White</div>
+                        <div class="prod-title">Fire Force Zip Shirt</div>
+                        <div class="prod-col">Red/Black/White</div>
                     </div>
                     <div class="price-desc">
-                        <div class="prod-price">£75.00</div>
+                        <div class="prod-price">£75</div>
                         <a href="product-details.php" class="product-ctn-button">
                             Order
                         </a>
@@ -113,13 +113,13 @@ if (!isset($_SESSION['account_loggedin'])) {
                 </div>
 
                 <div class="product-ctn">
-                    <img src="media/Fire force cross.jpg" alt="Fire force Cross">
+                    <img src="media/Cleaners emblem - Beige.jpg" alt="Cleaners Emblem">
                     <div class="prod-desc">
-                        <div class="prod-title"> Fire Force Zip Shirt</div>
-                        <div class="prod-col">Black/White</div>
+                        <div class="prod-title">Cleaner Jacket </div>
+                        <div class="prod-col">Cream/White</div>
                     </div>
                     <div class="price-desc">
-                        <div class="prod-price">£75.00</div>
+                        <div class="prod-price">£80</div>
                         <a href="product-details.php" class="product-ctn-button">
                             Order
                         </a>
@@ -127,13 +127,13 @@ if (!isset($_SESSION['account_loggedin'])) {
                 </div>
 
                 <div class="product-ctn">
-                    <img src="media/Fire force cross.jpg" alt="Fire force Cross">
+                    <img src="media/Luffy scar print - Red.jpg" alt="Luffy Scar Print">
                     <div class="prod-desc">
-                        <div class="prod-title"> Fire Force Zip Shirt</div>
-                        <div class="prod-col">Black/White</div>
+                        <div class="prod-title">Luffy Scar Print Hoodie</div>
+                        <div class="prod-col">Red/Black</div>
                     </div>
                     <div class="price-desc">
-                        <div class="prod-price">£75.00</div>
+                        <div class="prod-price">£60</div>
                         <a href="product-details.php" class="product-ctn-button">
                             Order
                         </a>
@@ -141,13 +141,13 @@ if (!isset($_SESSION['account_loggedin'])) {
                 </div>
 
                 <div class="product-ctn">
-                    <img src="media/Fire force cross.jpg" alt="Fire force Cross">
+                    <img src="media/Watchman series holo - Yellow.jpg" alt="Watchman Series Holo">
                     <div class="prod-desc">
-                        <div class="prod-title"> Fire Force Zip Shirt</div>
-                        <div class="prod-col">Black/White</div>
+                        <div class="prod-title">Watchman Series Jacket</div>
+                        <div class="prod-col">Yellow/Black/White</div>
                     </div>
                     <div class="price-desc">
-                        <div class="prod-price">£75.00</div>
+                        <div class="prod-price">£90</div>
                         <a href="product-details.php" class="product-ctn-button">
                             Order
                         </a>
@@ -160,26 +160,32 @@ if (!isset($_SESSION['account_loggedin'])) {
     <footer>
         <div class="footer-top-section">
             <div class="footer-ctn">
-                <h3 class="footer-title">Shop</h3>
-                <a href="#">All</a>
-                <a href="#">Accessories</a>
-                <a href="#">Outerwear</a>
-                <a href="#">Sale</a>
-                <a href="#">Gift Card</a>
+                <button class="footer-accordion-btn" onmousedown="toggleAccordion()"><h3 class="footer-title">Shop</h3></button>
+                <div class="accordion-panel">
+                    <a href="#">All</a>
+                    <a href="#">Accessories</a>
+                    <a href="#">Outerwear</a>
+                    <a href="#">Sale</a>
+                    <a href="#">Gift Card</a>
+                </div>
             </div>
 
             <div class="footer-ctn">
-                <h3 class="footer-title">Helpful Links</h3>
-                <a href="#">FAQ</a>
-                <a href="#">Shipping & Returns</a>
-                <a href="#">Size Guide</a>
-                <a href="#">Privacy Policy</a>
-                <a href="#">Terms & Conditions</a>
+                <button class="footer-accordion-btn" onmousedown="toggleAccordion()"><h3 class="footer-title">Helpful Links</h3></button>
+                <div class="accordion-panel">
+                    <a href="#">FAQ</a>
+                    <a href="#">Shipping & Returns</a>
+                    <a href="#">Size Guide</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms & Conditions</a>
+                </div>
             </div>
 
             <div class="footer-ctn">
-                <h3 class="footer-title" style="margin-top: 0;">Contact Us</h3>
-                <p class="footer-p">Email: contact@dynamix.com</p>
+                <button class="footer-accordion-btn" onmousedown="toggleAccordion()"><h3 class="footer-title">Contact Us</h3></button>
+                <div class="accordion-panel">
+                    <p class="footer-p">Email: contact@dynamix.com</p>
+                </div>
                 <div class="socials">
                     <a href="#"><i class="fab fa-tiktok fa-lg"></i></a>
                     <a href="#"><i class="fab fa-instagram fa-lg"></i></a>

@@ -222,24 +222,24 @@ nav a{
     overflow: hidden;
 }
 
-.product-ctn img{
+.product-ctn img, .prod-desc, .price-desc{
     width: 75%;
+}
+
+.product-ctn img{
     height: auto;
     margin-bottom: 10px;
 }
 
 .prod-desc{
-    width: 75%;
-    margin-bottom: 10px;
     text-align: left;
 }
 
 .price-desc{
-    width: 75%;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
+    align-items: flex-end;
+    margin-bottom: 10%;
 }
 
 .prod-title, .prod-col, .prod-price{
@@ -248,18 +248,20 @@ nav a{
 }
 
 .prod-title{
-    font-weight: 700;
-    font-size: 1.25rem;
+    font-weight: 400;
+    font-size: 1.1rem;
 }
 
 .prod-col{
-    font-weight: 300;
-    font-size: 1rem;
+    font-weight: 200;
+    font-size: 0.95rem;
+    margin-bottom: 0;
 }
 
 .prod-price{
-    font-weight: 700;
-    font-size: 1.125rem;
+    font-weight: 600;
+    font-size: 1rem;
+    margin: 0;
 }
 
 .product-ctn-button{
@@ -648,10 +650,10 @@ footer a:hover{
         display: none;
     }
     h2.title-txt, h2.title-txt-alt{
-        font-size: 52px;
+        font-size: 3.25rem;
     }
     p.title-p{
-        font-size: 16px;
+        font-size: 1rem;
     }
     #login-ctn{
         margin: 100px auto;
@@ -660,11 +662,20 @@ footer a:hover{
         width: 50%;
     }
     #second-sec h1{
-        font-size: 32px;
+        font-size: 2rem;
     }
     .price-desc{
         flex-direction: column;
         align-items: flex-start;
+    }
+
+    .prod-title{
+        font-size: 0.9rem;
+    }
+
+    .product-ctn-button{
+        width: 100%;
+        margin-top: 5%;
     }
 
     .footer-top-section{
