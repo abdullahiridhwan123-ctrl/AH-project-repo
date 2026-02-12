@@ -74,7 +74,7 @@ if (isset($_SESSION['account_loggedin'])) {
     </div>
 
     <div id="login-ctn">
-        <h1>Login</h1>
+        <h1>Log In</h1>
 
         <form action="authenticate.php" method="post" class="login-form">
                 <div class="form-group">

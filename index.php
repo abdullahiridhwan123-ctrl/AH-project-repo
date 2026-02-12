@@ -95,17 +95,14 @@ if (isset($_SESSION['account_loggedin'])) {
         </div>
         
         <section id="second-sec">
-            <div class="vid_ctn">
-                <video autoplay muted loop src="media/Multimedia.mp4" id="vid1"></video>
-            </div>
-            <div class="vid_ctn">
-                <video autoplay muted loop src="media/LUFFY Edit.mp4" id="vid2"></video>
-            </div>
-            <div class="vid_ctn">
-                <video autoplay muted loop src="media/Multimedia.mp4" id="vid3"></video>
-            </div>
-            <div>
-                <h1><a href="index.php"></a></h1>
+            <div class="prod-highlight-ctn">
+                <div class="prod-highlight-txt">
+                    <h3>Devoted to Delivering High Quality</h3>
+                    <h2>Determined to Push Groundbreaking Styles</h2>
+                </div>
+                <div class="prod-highlight-img">
+                    <img src="media/Black-tag.jpg" alt="Hoodie">
+                </div>
             </div>
         </section>
     </div>

@@ -106,7 +106,7 @@ session_start();
         </form>
     </div>
     
-    <script src="/Dark Brand/dark.js"></script>
+    <script src="dark.js"></script>
 </body>
 </html>
 
