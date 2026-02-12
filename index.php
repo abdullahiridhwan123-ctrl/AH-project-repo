@@ -100,9 +100,9 @@ if (isset($_SESSION['account_loggedin'])) {
                     <h3>Devoted to Delivering High Quality</h3>
                     <h2>Determined to Push Groundbreaking Styles</h2>
                 </div>
-                <div class="prod-highlight-img">
+                <!-- <div class="prod-highlight-img">
                     <img src="media/Black-tag.jpg" alt="Hoodie">
-                </div>
+                </div> -->
             </div>
         </section>
     </div>
@@ -159,3 +159,4 @@ if (isset($_SESSION['account_loggedin'])) {
     <script src="dark.js"></script>
 </body>
 </html>
+
