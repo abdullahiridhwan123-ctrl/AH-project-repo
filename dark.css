@@ -190,26 +190,6 @@ nav a{
     padding: 0px;
 }
 
-#second-sec{
-    padding: 20px;
-    width: 100vw;
-    height: auto;
-}
-
-#second-sec h1{
-    text-align: center;
-    font-size: 2.625rem;
-    margin: 0 0 5% 0 ;
-}
-
-#product-section{
-    width: 100%;
-    height: auto;
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-
 .product-ctn{
     width: 25%;
     background-color: light-dark(#f3fafa, #000000);
@@ -463,15 +443,53 @@ hr {
 
 /* ------Sections------ */
 
-#first-sec, .prod-highlight-ctn{
+#first-sec{
     display: flex;
     align-items: center;
     justify-content: space-around;
     overflow: hidden;
 }
 
-.prod-highlight-img{
-    width: 30%;
+#second-sec, #second-sec-loggedin{
+    margin: 0 auto;
+    padding: 20px;
+    width: 99vw;
+    height: 50vw;
+    background-image: url(media/Black-tag.jpg);
+    background-position: right;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#second-sec-loggedin{
+    background-image: none;
+}
+
+.second-section-ctn h1, #second-sec-loggedin h1{
+    text-align: left;
+    font-size: 2.5rem;
+    margin: 0 0 5% 0 ;
+}
+
+.second-section-ctn{
+    padding: 20px;
+    margin-bottom: 9%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+}
+
+.prod-highlight-txt{
+    width: 65%;
+}
+
+#product-section{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 footer {
@@ -663,9 +681,20 @@ footer a:hover{
     .product-ctn{
         width: 50%;
     }
-    #second-sec h1{
-        font-size: 2rem;
+    #second-sec{
+        height: 90vw;
+        margin: 0;
+        padding: 0;
     }
+
+    .second-section-ctn h1{
+        font-size: 1.2rem;
+    }
+
+    .second-section-ctn h2{
+        font-size: 1rem;
+    }
+
     .price-desc{
         flex-direction: column;
         align-items: flex-start;
@@ -724,9 +753,4 @@ footer a:hover{
         overflow: hidden;
         transition: max-height 0.2s ease-out;
     }
-
-    .prod-highlight-img{
-        display: none;
-    }
 }
-

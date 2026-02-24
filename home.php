@@ -95,7 +95,7 @@ if (!isset($_SESSION['account_loggedin'])) {
             </div>
         </section>
         
-        <section id="second-sec">
+        <section id="second-sec-loggedin">
             <h1>New Drop Pre-order</h1>
             <div id="product-section">
                 <div class="product-ctn">

@@ -95,14 +95,20 @@ if (isset($_SESSION['account_loggedin'])) {
         </div>
         
         <section id="second-sec">
-            <div class="prod-highlight-ctn">
+            <div class="second-section-ctn">
                 <div class="prod-highlight-txt">
-                    <h3>Devoted to Delivering High Quality</h3>
-                    <h2>Determined to Push Groundbreaking Styles</h2>
+                    <h1>THIS ISN'T JUST ANY TAG.</h1>
+                    <h2>IT IS UNMISTAKEABLE;</h2>
                 </div>
-                <!-- <div class="prod-highlight-img">
-                    <img src="media/Black-tag.jpg" alt="Hoodie">
-                </div> -->
+                <div class="prod-highlight-txt">
+                    <h2>PROOF OF EXCELLENCE.</h2>
+                </div>
+                <div class="prod-highlight-txt">
+                    <h2>PROOF OF EXCEPTIONAL QUALITY.</h2>
+                </div>
+                <div class="prod-highlight-txt">
+                    <h2>PROOF OF SUSTAINABILITY.</h2>
+                </div>
             </div>
         </section>
     </div>
