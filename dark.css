@@ -46,7 +46,7 @@ footer{
 
 #lg-text-ctn{
     position: relative;
-    width: 60%;
+    width: 60vw;
     animation: slideInLeft 0.8s cubic-bezier(0.215, 0.610, 0.355, 1) 0.2s;
 }
 
@@ -276,6 +276,17 @@ nav a{
     width: 100%;
 }
 
+a.form-link, .gradient-txt{
+    background: -webkit-linear-gradient(rgb(224, 16, 16), rgb(19, 19, 216));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.gradient-txt{
+    display: inline-block;
+}
+
 #login-ctn {
     display: flex;
     flex-flow: column;
@@ -352,11 +363,11 @@ nav a{
 .login-form .form-link {
     color: light-dark(#000000, #f3fafa);
     font-weight: 500;
-    text-decoration: underline;
+    text-decoration: none;
     font-size: 14px;
 }
 .login-form .form-link:hover {
-    text-decoration: none;
+    text-decoration: underline;
 }
 .login-form p.register-link {
     text-align: center;
@@ -466,8 +477,8 @@ hr {
 }
 
 .second-section-ctn h1, #second-sec-loggedin h1{
-    text-align: left;
-    font-size: 2.5rem;
+    text-align: center;
+    font-size: 2.25rem;
     margin: 0 0 5% 0 ;
 }
 
@@ -481,7 +492,12 @@ hr {
 }
 
 .prod-highlight-txt{
+    text-align: center;
     width: 65%;
+}
+
+.prod-highlight-txt h2{
+    font-weight: 400;
 }
 
 #product-section{
@@ -666,8 +682,24 @@ footer a:hover{
     .section-ctn{
         flex-direction: column;
     }
+
+    #second-sec-loggedin{
+        height: auto;
+    }
+
+    #second-sec-loggedin h1{
+        font-size: 1.75rem;
+    }
+
+    .section-ctn, .second-section-ctn, .footer-top-section, #second-sec-loggedin{
+        padding: 10px;
+    }
+
     .left-slide-logo img{
         display: none;
+    }
+    #lg-text-ctn{
+        width: 90vw;
     }
     h2.title-txt, h2.title-txt-alt{
         font-size: 3.25rem;
@@ -688,11 +720,18 @@ footer a:hover{
     }
 
     .second-section-ctn h1{
-        font-size: 1.2rem;
+        font-size: 1.1rem;
+        text-align: left;
     }
 
     .second-section-ctn h2{
-        font-size: 1rem;
+        font-size: 0.8rem;
+        font-weight: 600;
+    }
+
+    .prod-highlight-txt{
+        text-align: left;
+        width: 65%;
     }
 
     .price-desc{

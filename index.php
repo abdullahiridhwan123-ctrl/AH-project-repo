@@ -101,13 +101,16 @@ if (isset($_SESSION['account_loggedin'])) {
                     <h2>IT IS UNMISTAKEABLE;</h2>
                 </div>
                 <div class="prod-highlight-txt">
-                    <h2>PROOF OF EXCELLENCE.</h2>
+                    <h2>PROOF OF <p class="gradient-txt">STYLE</p>.</h2>
                 </div>
                 <div class="prod-highlight-txt">
-                    <h2>PROOF OF EXCEPTIONAL QUALITY.</h2>
+                    <h2>PROOF OF <p class="gradient-txt">EXCELLENCE</p>.</h2>
                 </div>
                 <div class="prod-highlight-txt">
-                    <h2>PROOF OF SUSTAINABILITY.</h2>
+                    <h2>PROOF OF <p class="gradient-txt">EXCEPTIONAL QUALITY</p>.</h2>
+                </div>
+                <div class="prod-highlight-txt">
+                    <h2>PROOF OF <p class="gradient-txt">SUSTAINABILITY</p>.</h2>
                 </div>
             </div>
         </section>

@@ -90,7 +90,7 @@ session_start();
 
                 <div class="form-group mar-bot-5">
                     <i class="fas fa-user-lock form-icon-left"></i>
-                    <input class="form-input" type="password" name="password" placeholder="Password" id="password" maxlength="36" required>
+                    <input class="form-input" type="password" name="password" placeholder="Password" id="password" minlength="6" maxlength="36" required>
                     <div class="show-pass-btn" onclick="showPassword()"> <i class="far fa-eye form-icon-right" id="showPass"></i> </div>
                 </div>
                 
