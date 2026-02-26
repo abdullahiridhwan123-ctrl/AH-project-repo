@@ -23,7 +23,7 @@ if (!isset($_POST['username'], $_POST['password'])) {
 // ----- The code above was all written by me (SCN: 241464040) ----- //
 
 
-// ----- The code below was taken from https://codeshack.io/secure-login-system-php-mysql/ ----- //
+// ----- The code below while mainly edited by me,was taken from https://codeshack.io/secure-login-system-php-mysql/ ----- //
 // Prepare our SQL, which will prevent SQL injection
 if ($stmt = $connect->prepare('SELECT id, password FROM accounts WHERE username = ?')) {
     // Bind parameters (s = string, i = int, b = blob, etc), in our case the username is a string so we use "s"

@@ -93,6 +93,13 @@ session_start();
                     <input class="form-input" type="password" name="password" placeholder="Password" id="password" minlength="6" maxlength="36" required>
                     <div class="show-pass-btn" onclick="showPassword()"> <i class="far fa-eye form-icon-right" id="showPass"></i> </div>
                 </div>
+
+                <?php
+                    if(isset($_SESSION["error"])){
+                        $error = $_SESSION["error"];
+                        echo "<span style='color:red; text-align:center; font-size:11px;'>$error</span>";
+                    }
+                ?>
                 
                 <button class="sub_btn" type="submit">Register</button>
 
