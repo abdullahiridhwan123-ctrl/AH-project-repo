@@ -394,6 +394,11 @@ a.form-link, .gradient-txt{
     height: 40px;
     box-shadow: 0px 0px 6px 1px rgba(45, 57, 68, 0.1);
 }
+
+.sub_btn_alt{
+    color: light-dark(#000000, #f3fafa);
+}
+
 .sub_btn:hover {
     background-color: light-dark(#00000093, #f3fafa93);
 }
@@ -506,6 +511,80 @@ hr {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+}
+
+.profile-block{
+    width: 100%;
+    max-width: 500px;
+    background-color: light-dark(#f3fafa, #000000);
+    box-shadow: 0px 0px 7px 1px rgba(45, 57, 68, 0.05);
+    border-radius: 5px;
+    margin: 60px auto;
+    padding: 20px;
+}
+
+.profile-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.profile-detail{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+    border-bottom: 1px solid rgba(133, 120, 120, 0.795);
+}
+
+#print-order-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
+}
+
+#print-order-form select, #print-order-form input[type="number"]{
+    width: 70%;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 1% 0;
+    border: 1px solid #a8a9ab;
+    background-color: light-dark(#f3fafa, #000000);
+    color: light-dark(#000000, #f3fafa);
+}
+
+#print-order-form input[type="number"], #print-order-form input[type="checkbox"]{
+    text-align: center;
+}
+
+#print-order-form p{
+    color: light-dark(#000000, #f3fafa);
+    font-size: 0.95rem;
+    font-weight: 300;
+    margin: 10px 0 5px 0;
+    display: block;
+    width: 30%;
+}
+
+#print-order-form div{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+p#mail-list{
+    width: 70%;
+    text-align: center;
+}
+
+textarea {
+    resize: none;
 }
 
 footer {
@@ -739,7 +818,7 @@ footer a:hover{
         align-items: flex-start;
     }
 
-    .prod-title{
+    .prod-title, .profile-detail{
         font-size: 0.9rem;
     }
 

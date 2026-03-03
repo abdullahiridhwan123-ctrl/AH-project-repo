@@ -103,9 +103,13 @@ $stmt->close();
             </div>
         </div>
 
-        <section id="first-sec">
+        <section>
             <div class="section-ctn">
-                <div class="block">
+                <div class="profile-block">
+                    <div class="profile-img">
+                        <i class="fas fa-user fa-6x"></i>
+                    </div>
+
                     <div class="profile-detail">
                         <strong>Username</strong>
                         <?=htmlspecialchars($_SESSION['account_name'])?>
@@ -117,15 +121,11 @@ $stmt->close();
                     </div>
 
                     <div class="profile-detail">
-                        <strong>Registered</strong>
+                        <strong>Date Registered</strong>
                         <?=htmlspecialchars($registered)?>
                     </div>
                 </div>
             </div>
-        </section>
-        
-        <section id="second-sec">
-            
         </section>
     </div>
 

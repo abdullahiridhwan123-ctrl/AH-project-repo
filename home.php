@@ -101,11 +101,11 @@ if (!isset($_SESSION['account_loggedin'])) {
                 <div class="product-ctn">
                     <img src="media/Fire force cross - Red.jpg" alt="Fire force Cross">
                     <div class="prod-desc">
-                        <div class="prod-title">Fire Force Zip Shirt</div>
+                        <div class="prod-title">Fire Force Cross Print</div>
                         <div class="prod-col">Red/Black/White</div>
                     </div>
                     <div class="price-desc">
-                        <div class="prod-price">£75</div>
+                        <div class="prod-price">£70</div>
                         <a href="product-details.php" class="product-ctn-button">
                             Order
                         </a>
@@ -115,7 +115,7 @@ if (!isset($_SESSION['account_loggedin'])) {
                 <div class="product-ctn">
                     <img src="media/Cleaners emblem - Beige.jpg" alt="Cleaners Emblem">
                     <div class="prod-desc">
-                        <div class="prod-title">Cleaner Jacket </div>
+                        <div class="prod-title">Cleaner Print</div>
                         <div class="prod-col">Cream/White</div>
                     </div>
                     <div class="price-desc">
@@ -129,7 +129,7 @@ if (!isset($_SESSION['account_loggedin'])) {
                 <div class="product-ctn">
                     <img src="media/Luffy scar print - Red.jpg" alt="Luffy Scar Print">
                     <div class="prod-desc">
-                        <div class="prod-title">Luffy Scar Print Hoodie</div>
+                        <div class="prod-title">Luffy Scar Print</div>
                         <div class="prod-col">Red/Black</div>
                     </div>
                     <div class="price-desc">
@@ -143,7 +143,7 @@ if (!isset($_SESSION['account_loggedin'])) {
                 <div class="product-ctn">
                     <img src="media/Watchman series holo - Yellow.jpg" alt="Watchman Series Holo">
                     <div class="prod-desc">
-                        <div class="prod-title">Watchman Series Jacket</div>
+                        <div class="prod-title">Watchman Series Print</div>
                         <div class="prod-col">Yellow/Black/White</div>
                     </div>
                     <div class="price-desc">

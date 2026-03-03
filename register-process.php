@@ -1,5 +1,6 @@
 <?php 
-    header( "refresh:5; url=login.php" );
+    // header( "refresh:5; url=login.php" );
+    header('Location: login.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -83,7 +84,7 @@
                 $stmt->bind_param('ssss', $_POST['username'], $password, $_POST['email'], $registered);
                 $stmt->execute();
                 // Output success message
-                echo 'You have successfully registered! You can now login!';
+                echo '<script>alert("You have successfully registered! You can now login!");</script>';
             }
             else {
                 // Something is wrong with the SQL statement, check to make sure the accounts table exists with all 3 fields
