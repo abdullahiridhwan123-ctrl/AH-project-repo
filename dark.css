@@ -376,7 +376,7 @@ a.form-link, .gradient-txt{
     font-size: 14px;
     color: #6b7179;
 }
-.sub_btn {
+.sub_btn, .sub_btn_alt {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -395,15 +395,11 @@ a.form-link, .gradient-txt{
     box-shadow: 0px 0px 6px 1px rgba(45, 57, 68, 0.1);
 }
 
-.sub_btn_alt{
-    color: light-dark(#000000, #f3fafa);
-}
-
-.sub_btn:hover {
+.sub_btn:hover, .sub_btn_alt:hover {
     background-color: light-dark(#00000093, #f3fafa93);
 }
 
-.sub_btn:active{
+.sub_btn:active, .sub_btn_alt:active{
     animation: btnPress 0.08s ease-in-out;
     background-color: light-dark(#000000,#f3fafa);
 }
@@ -540,13 +536,13 @@ hr {
     border-bottom: 1px solid rgba(133, 120, 120, 0.795);
 }
 
-#print-order-form{
+#print-order-form, .order-confirm-sec{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
-    margin-top: 20px;
+    margin-top: 5%;
 }
 
 #print-order-form select, #print-order-form input[type="number"]{
@@ -573,14 +569,18 @@ hr {
 }
 
 #print-order-form div{
-    width: 100%;
+    width: 70%;
+    margin: 1% auto;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 
 p#mail-list{
-    width: 70%;
-    text-align: center;
+    width: 90%;
+}
+
+#print-order-form input[type="checkbox"]{
+    width: 3%;
 }
 
 textarea {
@@ -825,6 +825,28 @@ footer a:hover{
     .product-ctn-button{
         width: 100%;
         margin-top: 5%;
+    }
+
+    #print-order-form p{
+        width: 100%;
+    }
+
+    #print-order-form, .order-confirm-sec{
+        margin-top: 25%;
+    }
+
+    #print-order-form input[type="checkbox"]{
+        width: 20%;
+    }
+
+    textarea{
+        width: 99%;
+        height: 100px;
+    }
+
+    #print-order-form div{
+        flex-direction: column;
+        align-items: center;
     }
 
     .footer-top-section{

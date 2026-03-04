@@ -91,33 +91,33 @@ if (mysqli_connect_errno()) {
                 <h1 class="prod-title">Please fill out the Order form.</h1>
                 <select name="product" id="product" required>
                     <option value="" disabled selected><--Hoodies--></option>
-                    <option value="product1">Dynamix Pullover Hoodie</option>
-                    <option value="product2">Dynamix Zip-up Hoodie</option>
-                    <option value="product3">Dynamix Fleece Hoodie</option>
-                    <option value="product4">Dynamix Oversized Hoodie</option>
+                    <option value="Pullover Hoodie">Dynamix Pullover Hoodie</option>
+                    <option value="Zip-up Hoodie">Dynamix Zip-up Hoodie</option>
+                    <option value="Fleece Hoodie">Dynamix Fleece Hoodie</option>
+                    <option value="Oversized Hoodie">Dynamix Oversized Hoodie</option>
                     <option value="" disabled selected><--Tshirts--></option>
-                    <option value="product5">Dynamix Oversized fit T-Shirt</option>
-                    <option value="product6">Dynamix Loose fit T-Shirt</option>
-                    <option value="product7">Dynamix Regular fit T-Shirt</option>
-                    <option value="product8">Dynamix Cropped T-Shirt</option>
+                    <option value="Oversized T-Shirt">Dynamix Oversized fit T-Shirt</option>
+                    <option value="Loose T-Shirt">Dynamix Loose fit T-Shirt</option>
+                    <option value="Regular T-Shirt">Dynamix Regular fit T-Shirt</option>
+                    <option value="Cropped T-Shirt">Dynamix Cropped T-Shirt</option>
                     <option value="" disabled selected><--Jackets--></option>
-                    <option value="product9">Dynamix Hooded Jacket</option>
-                    <option value="product10">Dynamix Shirt Jacket</option>
-                    <option value="product11">Dynamix Fleece Jacket</option>
-                    <option value="product12">Dynamix Puffer Jacket</option>
-                    <option value="product13">Dynamix Windproof Jacket</option>
+                    <option value="Hooded Jacket">Dynamix Hooded Jacket</option>
+                    <option value="Shirt Jacket">Dynamix Shirt Jacket</option>
+                    <option value="Fleece Jacket">Dynamix Fleece Jacket</option>
+                    <option value="Puffer Jacket">Dynamix Puffer Jacket</option>
+                    <option value="Windproof Jacket">Dynamix Windproof Jacket</option>
                     <option value="" disabled selected>Select Product</option>
                 </select>
 
                 <select name="colour" id="colour" required>
                     <option value="" disabled selected>Select Colour</option>
-                    <option value="black">Jet Black</option>
-                    <option value="white">Pure White</option>
-                    <option value="grey">Light Grey</option>
-                    <option value="blue">Royal Blue</option>
-                    <option value="red">Crimson Red</option>
-                    <option value="green">Emerald Green</option>
-                    <option value="purple">Midnight Purple</option>
+                    <option value="Jet Black">Jet Black</option>
+                    <option value="Pure White">Pure White</option>
+                    <option value="Light Grey">Light Grey</option>
+                    <option value="Royal Blue">Royal Blue</option>
+                    <option value="Crimson Red">Crimson Red</option>
+                    <option value="Emerald Green">Emerald Green</option>
+                    <option value="Midnight Purple">Midnight Purple</option>
                 </select>
 
                 <select name="size" id="size" required>
@@ -133,13 +133,15 @@ if (mysqli_connect_errno()) {
 
                 <div>
                     <p>If you would like to personalise your product, please let us know in the comment area:</p>
-                    <textarea name="customer-comment" id="customer-comment" placeholder="Type here..."></textarea>
+                    <textarea name="customer-comment" id="customer-comment" placeholder="Type here..." cols="40"></textarea>
                 </div>
                 
-                <p id="mail-list">Subscribe to our Mailing list to stay informed, get early access to new collections and access to exclusive offers.</p>
-                <input type="checkbox" name="email-list" id="email-list">
-
                 <div>
+                    <p id="mail-list">Subscribe to our Mailing list to stay informed, get early access to new collections and access to exclusive offers.</p>
+                    <input type="checkbox" name="email-list" id="email-list">
+                </div>
+
+                <div style="display: flex; justify-content: center; gap: 1rem; margin-top: 1.5rem;">
                     <button class="sub_btn_alt" type="submit">Submit Order</button>
                 </div>
             </form>
@@ -147,7 +149,7 @@ if (mysqli_connect_errno()) {
     </section>
 
     <footer>
-        <div class="footer-top-section">
+        <!-- <div class="footer-top-section">
             <div class="footer-ctn">
                 <button class="footer-accordion-btn" onmousedown="toggleAccordion()"><h3 class="footer-title">Shop</h3></button>
                 <div class="accordion-panel">
@@ -183,7 +185,7 @@ if (mysqli_connect_errno()) {
                     <a href="#"><i class="fab fa-discord fa-lg"></i></a>
                 </div>
             </div>
-        </div>
+        </div> -->
         
 
         <div class="footer-logo">
