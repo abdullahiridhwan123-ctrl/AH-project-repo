@@ -69,8 +69,8 @@ h2.title-txt::after, h2.title-txt-alt::after{
 
 p.title-p{
     color: light-dark(#000000, #f3fafa);
-    font-size: 1.125rem;
-    font-weight: 400;
+    font-size: 1.1rem;
+    font-weight: 300;
 }
 
 .left-slide-logo{
