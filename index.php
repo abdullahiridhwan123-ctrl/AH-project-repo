@@ -78,7 +78,7 @@ if (isset($_SESSION['account_loggedin'])) {
                 <div id="lg-text-ctn">
                     <h2 class="title-txt">DYNAMIX</h2>
                     <p class="title-p">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ipsum sapien, volutpat a dictum sed, imperdiet quis libero.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi non odio blandit, laoreet eros at, mollis enim. Curabitur nec sem et nibh accumsan rutrum. Maecenas eros metus, feugiat ut porttitor sed, ornare ut ligula. Proin ut velit nec purus vestibulum malesuada. In tempor libero et ex euismod, sit amet rhoncus diam tincidunt.
                     </p>
                 </div>
                 <div class="left-slide-logo">
