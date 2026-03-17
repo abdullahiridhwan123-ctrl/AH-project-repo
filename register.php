@@ -97,7 +97,7 @@ session_start();
                 <?php
                     if(isset($_SESSION["error"])){
                         $error = $_SESSION["error"];
-                        echo "<span style='color:red; text-align:center; font-size:0.9rem;'>$error</span>";
+                        echo "<span id='error_span' style='color:red; text-align:center; font-size:0.9rem;'>$error</span>";
                     }
                 ?>
                 

@@ -26,7 +26,7 @@
     // Create connection to the database
     $connect = mysqli_connect($db_host, $db_username, $db_password, $db_name);
     $error = "Please fill all the fields!";
-    $error_username = "Username already exists! Please choose another!";
+    $error_username = "Username or email already exists! Please choose another!";
 
     // Check for connection errors
     if (mysqli_connect_errno()) {
@@ -48,10 +48,10 @@
         exit();
     }
 
-    // Check if the username already exists
-    if ($stmt = $connect->prepare('SELECT id, password FROM accounts WHERE username = ?')) {
+    // Check if the username and email already exists
+    if ($stmt = $connect->prepare('SELECT id, password FROM accounts WHERE username = ? OR email = ?')) {
         // Bind parameters (s = string, i = int, b = blob, etc)
-        $stmt->bind_param('s', trim($_POST['username'], " \t\n"));
+        $stmt->bind_param('ss', trim($_POST['username'], " \t\n"), trim($_POST['email'], " \t\n"));
         $stmt->execute();
         // Store the result so we can check if the account exists in the database
         $stmt->store_result();
@@ -66,9 +66,14 @@
             exit('Password must be between 6 and 36 characters long!');
         }
 
+        // Validate email (must be a valid email address)
+        if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
+            exit('Email is not valid!');
+        }
+
         // Check if the account exists
         if ($stmt->num_rows > 0) {
-            // Username already exists
+            // Username or email already exists
             $_SESSION['error'] = $error_username;
             header('Location: register.php');
             exit();

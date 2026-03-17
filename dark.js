@@ -43,3 +43,8 @@ function toggleAccordion() {
         });
     }
 }
+
+function hideMessage() {
+    document.getElementById("error_span").style.display = "none";
+};
+setTimeout(hideMessage, 4000);
