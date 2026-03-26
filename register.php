@@ -1,11 +1,6 @@
 <?php
-// We need to use sessions, so you should always initialize sessions using the below function
+// Initialise Sessions
 session_start();
-// If the user is logged in, redirect to the home page
-// if (isset($_SESSION['account_loggedin'])) {
-//     header('Location: home.php');
-//     exit;
-// }
 ?>
 
 <!DOCTYPE html>
@@ -95,6 +90,7 @@ session_start();
                 </div>
 
                 <?php
+                    // If the processing php file encounters and sends any errors, display the error message as a span in the form
                     if(isset($_SESSION["error"])){
                         $error = $_SESSION["error"];
                         echo "<span id='error_span' style='color:red; text-align:center; font-size:0.9rem;'>$error</span>";
@@ -118,5 +114,6 @@ session_start();
 </html>
 
 <?php
+// Unload the error from the processing file
     unset($_SESSION["error"]);
 ?>
