@@ -1,17 +1,17 @@
 <?php
-// We need to use sessions, so you should always initialize sessions using the below function
+// Initialize sessions
 session_start();
 // If the user is not logged in, redirect to the login page
 if (!isset($_SESSION['account_loggedin'])) {
     header('Location: login.php');
     exit;
 }
-// Change the below variables to reflect your MySQL database details
+
 $db_host = 'localhost';
 $db_username = '241464040';
 $db_password = '241464040';
 $db_name = 'phplogin';
-// Try and connect using the info above
+// Connect to MySQL database using the above credentials
 $con = mysqli_connect($db_host, $db_username, $db_password, $db_name);
 // Ensure there are no connection errors
 if (mysqli_connect_errno()) {
@@ -87,8 +87,17 @@ if (mysqli_connect_errno()) {
 
     <section id="first-sec">
         <div class="section-ctn">
-            <form action="pre-order-confirm.php" method="POST" id="print-order-form">
+            <form action="order-processing.php" method="POST" id="print-order-form">
                 <h1 class="prod-title">Please fill out the Order form.</h1>
+
+                <select name="print" id="print" required>
+                    <option value="" disabled selected>Select Prints</option>
+                    <option value="Fire Force Cross">Fire Force Cross Print</option>
+                    <option value="Cleaner">Cleaner Print</option>
+                    <option value="Luffy Scar">Luffy Scar Print</option>
+                    <option value="Watchman Series">Watchman Series Print</option>
+                </select>
+
                 <select name="product" id="product" required>
                     <option value="" disabled selected><--Hoodies--></option>
                     <option value="Pullover Hoodie">Dynamix Pullover Hoodie</option>

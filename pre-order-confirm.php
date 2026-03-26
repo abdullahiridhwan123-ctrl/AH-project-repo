@@ -1,48 +1,11 @@
 <?php
-// We need to use sessions, so you should always initialize sessions using the below function
+// Initialize sessions
 session_start();
-// If the user is not logged in, redirect to the login page
-if (!isset($_SESSION['account_loggedin'])) {
-    header('Location: login.php');
+// If the user is logged in, redirect to the home page
+if (isset($_SESSION['account_loggedin'])) {
+    header('Location: home.php');
     exit;
 }
-// Change the below variables to reflect your MySQL database details
-$db_host = 'localhost';
-$db_username = '241464040';
-$db_password = '241464040';
-$db_name = 'phplogin';
-// Try and connect using the info above
-$con = mysqli_connect($db_host, $db_username, $db_password, $db_name);
-// Ensure there are no con$con errors
-if (mysqli_connect_errno()) {
-    exit('Failed to connect to MySQL!');
-}
-?>
-
-<?php
-    // get the customer order submission encoded in the URL
-    $product = $_POST['product'];
-    $colour = $_POST['colour'];
-    $size = $_POST['size'];
-    $quantity = $_POST['quantity'];
-    $comment = $_POST['customer-comment'];
-    
-
-    // execute SQL query to insert values into the orders table
-    $query_string = "INSERT INTO orders (product, colour, size, quantity, comment) VALUES ('$product', '$colour', '$size', '$quantity', '$comment')";
-
-    // The query is passed to the server and the result evaluated as true if successful
-    if (mysqli_query($con, $query_string))
-    {
-        // create session variable to confirm order submission
-        $_SESSION['order_submitted'] = true;
-    }
-    else {
-        echo "<h1> Error Confirming Order </h1>";
-        echo("Error description: " . mysqli_error($con)) . "<br>";
-    }
-    // Close the connection
-    mysqli_close($con);
 ?>
 
 <!DOCTYPE html>
@@ -68,10 +31,25 @@ if (mysqli_connect_errno()) {
                 <p class="footer-p" style="text-align: center;">Thank you for your order <?=htmlspecialchars($_SESSION['account_name'])?>! Your receipt has been sent to your email address with an estimated delivery date.</p>
 
             <?php
+                // If the order submission session variable is not set or not true, redirect back to order page
+                if (!isset($_SESSION['order_submitted']) || $_SESSION['order_submitted'] !== true) {
+                    header('Location: product-details.php');
+                    exit;
+                }
+                else{
+                    // Get the order details from the session variables
+                    $print = htmlspecialchars($_SESSION['order_print']);
+                    $product = htmlspecialchars($_SESSION['order_product']);
+                    $colour = htmlspecialchars($_SESSION['order_colour']);
+                    $size = htmlspecialchars($_SESSION['order_size']);
+                    $quantity = htmlspecialchars($_SESSION['order_quantity']);
+                    $comment = htmlspecialchars($_SESSION['order_comment']);
+                }
                 // Unset the order submission session variable so that the confirmation message only appears once
                 unset($_SESSION['order_submitted']);
                 // Display the order details to the user
                 echo "<h2>Order Details:</h2>";
+                echo "<p class='footer-p'><strong>Print:</strong> $print</p>";
                 echo "<p class='footer-p'><strong>Product:</strong> $product</p>";
                 echo "<p class='footer-p'><strong>Colour:</strong> $colour</p>";
                 echo "<p class='footer-p'><strong>Size:</strong> $size</p>";

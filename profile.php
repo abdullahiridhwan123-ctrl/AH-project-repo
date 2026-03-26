@@ -1,24 +1,23 @@
 <?php
-// We need to use sessions, so you should always initialize sessions using the below function
+// Initialize sessions
 session_start();
 // If the user is not logged in, redirect to the login page
 if (!isset($_SESSION['account_loggedin'])) {
     header('Location: login.php');
     exit;
 }
-// Change the below variables to reflect your MySQL database details
+
 $db_host = 'localhost';
 $db_username = '241464040';
 $db_password = '241464040';
 $db_name = 'phplogin';
-// Try and connect using the info above
+// Connect to MySQL database using the above credentials
 $con = mysqli_connect($db_host, $db_username, $db_password, $db_name);
 // Ensure there are no connection errors
 if (mysqli_connect_errno()) {
     exit('Failed to connect to MySQL!');
 }
-// We don't have the email or registered info stored in sessions so instead we can get the results from the database
-// Initialize variables to prevent null type errors
+// the email or registered IS NOT stored in sessions so Fetch results from the database
 $email = '';
 $registered = '';
 
@@ -26,7 +25,7 @@ $stmt = $con->prepare('SELECT email, registered FROM accounts WHERE id = ?');
 if ($stmt === null) {
     die('Prepare failed: ' . $con->error);
 }
-// In this case, we can use the account ID to get the account info
+// use account ID to get the account info
 $stmt->bind_param('i', $_SESSION['account_id']);
 $stmt->execute();
 $stmt->bind_result($email, $registered);
