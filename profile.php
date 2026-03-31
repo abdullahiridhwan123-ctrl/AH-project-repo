@@ -21,6 +21,8 @@ if (mysqli_connect_errno()) {
 $email = '';
 $registered = '';
 
+// ----- The code below while mainly edited by me,was taken from https://codeshack.io/secure-login-system-php-mysql/ ----- //
+
 $stmt = $con->prepare('SELECT email, registered FROM accounts WHERE id = ?');
 if ($stmt === null) {
     die('Prepare failed: ' . $con->error);
@@ -32,6 +34,8 @@ $stmt->bind_result($email, $registered);
 $stmt->fetch();
 $stmt->close();
 ?>
+
+<!-- The code below was all written by me (SCN: 241464040) -->
 
 <!DOCTYPE html>
 <html lang="en">

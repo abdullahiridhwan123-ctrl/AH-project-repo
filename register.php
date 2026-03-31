@@ -71,21 +71,28 @@ session_start();
 
     <div id="login-ctn">
         <h1>Sign Up</h1>
-
+        <!-- The registration form data will be sent to register-process.php for processing when the user clicks the submit button -->  
         <form action="register-process.php" method="post" class="login-form">
                 <div class="form-group">
+                    <!-- User Icon -->
                     <i class="fas fa-user form-icon-left"></i>
+                    <!-- Username input -->
                     <input class="form-input" type="text" name="username" placeholder="Username" id="username" maxlength="30" required >
                 </div>
 
                 <div class="form-group">
+                    <!-- Email Icon -->
                     <i class="fas fa-envelope form-icon-left"></i>
+                    <!-- Email input -->
                     <input class="form-input" type="email" name="email" placeholder="E-mail" id="email" maxlength="50" required >
                 </div>
 
                 <div class="form-group mar-bot-5">
+                    <!-- Password Icon -->
                     <i class="fas fa-user-lock form-icon-left"></i>
+                    <!-- Password input -->
                     <input class="form-input" type="password" name="password" placeholder="Password" id="password" minlength="6" maxlength="36" required>
+                    <!-- Show Password Button with JavaScript function to toggle password visibility -->
                     <div class="show-pass-btn" onclick="showPassword()"> <i class="far fa-eye form-icon-right" id="showPass"></i> </div>
                 </div>
 
@@ -104,7 +111,7 @@ session_start();
                 <div class="sub_btn">
                     <p>Continue with <i class="fab fa-google"></i></p>
                 </div>
-
+                <!-- The link below takes the user to the login page if they already have an account -->
                 <p class="register-link">Already have an account? <a href="login.php" class="form-link">Log In</a></p>
         </form>
     </div>

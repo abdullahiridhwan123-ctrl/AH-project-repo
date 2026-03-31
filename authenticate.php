@@ -49,6 +49,7 @@ if ($stmt->num_rows > 0) {
         // Output success message
         header('Location: home.php');
         exit;
+// ----- The code below was all written by me (SCN: 241464040) ----- //
     } else {
         // Incorrect password
         $_SESSION['error'] = $error;

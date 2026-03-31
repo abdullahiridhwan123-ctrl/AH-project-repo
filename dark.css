@@ -22,7 +22,7 @@ body{
     margin: 0;
     font-family: "Inter", sans-serif;
     min-height: 100vh;
-    background-color: light-dark(#f3fafa, #000000);
+    background-color: light-dark(#fafafa, #000000);
     overflow: hidden;
     overflow-y: scroll;
     cursor: url("media/chrome_cursor.png"), auto;
@@ -51,7 +51,7 @@ footer{
 }
 
 h2.title-txt, h2.title-txt-alt{
-    color: light-dark(#000000, #f3fafa);
+    color: light-dark(#000000, #fafafa);
     font-size: 5rem;
     font-weight: 800;
     font-style: oblique;
@@ -68,7 +68,7 @@ h2.title-txt::after, h2.title-txt-alt::after{
 }
 
 p.title-p{
-    color: light-dark(#000000, #f3fafa);
+    color: light-dark(#000000, #fafafa);
     font-size: 1.1rem;
     font-weight: 300;
 }
@@ -100,7 +100,7 @@ nav{
 }
 
 nav a{
-    color: light-dark(#000000, #f3fafa);
+    color: light-dark(#000000, #fafafa);
     text-decoration: none;
 }
 
@@ -110,7 +110,7 @@ nav a{
     padding: 10px;
     margin-right: 30px;
     border-radius: 50%;
-    background-color: light-dark(#f3fafa, #000000);
+    background-color: light-dark(#fafafa, #000000);
 }
 
 #nav-logo::after, #nav-logo::before, .user-icon::after, .user-icon::before, .cart-icon::after, .cart-icon::before, .logout-icon::after, .logout-icon::before{
@@ -160,7 +160,7 @@ nav a{
 }
 
 .nav-right-ctn{
-    color: light-dark(#000000, #f3fafa);
+    color: light-dark(#000000, #fafafa);
     display: flex;
     padding: 5px;
     padding-right: 0;
@@ -181,8 +181,8 @@ nav a{
     width: max-content;
     position: relative;
     border-radius: 50%;
-    color: light-dark(#000000, #f3fafa);
-    background-color: light-dark(#f3fafa, #000000);
+    color: light-dark(#000000, #fafafa);
+    background-color: light-dark(#fafafa, #000000);
     cursor: url("media/chrome_cursor.png"), auto;
 }
 
@@ -192,7 +192,7 @@ nav a{
 
 .product-ctn{
     width: 25%;
-    background-color: light-dark(#f3fafa, #000000);
+    background-color: light-dark(#fafafa, #000000);
     box-shadow: 0px 0px 7px 1px rgba(45, 57, 68, 0.05);
     display: flex;
     flex-direction: column;
@@ -223,7 +223,7 @@ nav a{
 }
 
 .prod-title, .prod-col, .prod-price{
-    color: light-dark(#000000, #f3fafa);
+    color: light-dark(#000000, #fafafa);
     margin: 5px 0;
 }
 
@@ -249,11 +249,11 @@ nav a{
     padding: 4.5% 11.5%;
     width: max-content;
     position: relative;
-    background-color: light-dark(#f3fafa, #000000);
+    background-color: light-dark(#fafafa, #000000);
     display: inline-block;
     text-decoration: none;
-    color: light-dark(#000000, #f3fafa);
-    border: 1px solid light-dark(#000000, #f3fafa);
+    color: light-dark(#000000, #fafafa);
+    border: 1px solid light-dark(#000000, #fafafa);
 }
 
 .sec-scroll-btn{
@@ -261,13 +261,13 @@ nav a{
     justify-content: space-evenly;
     align-items: center;
     text-align: center;
-    background-color: light-dark(#f3fafa, #000000);
+    background-color: light-dark(#fafafa, #000000);
 }
 
 .sec-scroll-btn i{
     width: 100px;
     height: 100px;
-    color: light-dark(#000000, #f3fafa);
+    color: light-dark(#000000, #fafafa);
 }
 
 .login-form {
@@ -292,7 +292,7 @@ a.form-link, .gradient-txt{
     flex-flow: column;
     width: 400px;
     max-width: 95%;
-    background-color: light-dark(#f3fafa, #000000);
+    background-color: light-dark(#fafafa, #000000);
     box-shadow: 0px 0px 7px 1px rgba(45, 57, 68, 0.05);
     border-radius: 5px;
     margin: 60px auto;
@@ -314,7 +314,7 @@ a.form-link, .gradient-txt{
     transition: all 0.1s linear;
 }
 .login-form .form-group .form-icon-left, .login-form .form-group .form-icon-right {
-    fill: light-dark(#f3fafa, #000000);
+    fill: light-dark(#fafafa, #000000);
     position: absolute;
     transform: translateY(-50%);
     top: 50%;
@@ -322,7 +322,7 @@ a.form-link, .gradient-txt{
 
 .show-pass-btn {
     z-index: 2;
-    fill: light-dark(#f3fafa, #000000);
+    fill: light-dark(#fafafa, #000000);
     position: absolute;
     transform: translateX(50%);
     left: 95%;
@@ -342,7 +342,7 @@ a.form-link, .gradient-txt{
     padding-right: 50px;
 }
 .login-form .form-group:focus-within .form-icon-left {
-    fill: #f3fafa;
+    fill: #fafafa;
 }
 .login-form .form-input {
     margin: 5% auto;
@@ -351,7 +351,7 @@ a.form-link, .gradient-txt{
     border: 1px solid #a8a9ab;
     padding: 0 15px;
     border-radius: 50px;
-    color: light-dark(#000000, #f3fafa);
+    color: light-dark(#000000, #fafafa);
     font-size: 14px;
     transition: all 0.1s ease-in-out;
 }
@@ -361,7 +361,7 @@ a.form-link, .gradient-txt{
     color: light-dark(#8c8a8a, #c0c0c0);
 }
 .login-form .form-link {
-    color: light-dark(#000000, #f3fafa);
+    color: light-dark(#000000, #fafafa);
     font-weight: 500;
     text-decoration: none;
     font-size: 14px;
@@ -384,8 +384,8 @@ a.form-link, .gradient-txt{
     appearance: none;
     cursor: pointer;
     border: 0;
-    background-color: light-dark(#000000,#f3fafa);
-    color: light-dark(#f3fafa,#000000);
+    background-color: light-dark(#000000,#fafafa);
+    color: light-dark(#fafafa,#000000);
     padding: 21px 14px;
     font-size: 14px;
     font-weight: 600;
@@ -396,12 +396,12 @@ a.form-link, .gradient-txt{
 }
 
 .sub_btn:hover, .sub_btn_alt:hover {
-    background-color: light-dark(#00000093, #f3fafa93);
+    background-color: light-dark(#00000093, #fafafa93);
 }
 
 .sub_btn:active, .sub_btn_alt:active{
     animation: btnPress 0.08s ease-in-out;
-    background-color: light-dark(#000000,#f3fafa);
+    background-color: light-dark(#000000,#fafafa);
 }
 
 hr {
@@ -512,7 +512,7 @@ hr {
 .profile-block{
     width: 100%;
     max-width: 500px;
-    background-color: light-dark(#f3fafa, #000000);
+    background-color: light-dark(#fafafa, #000000);
     box-shadow: 0px 0px 7px 1px rgba(45, 57, 68, 0.05);
     border-radius: 5px;
     margin: 60px auto;
@@ -551,8 +551,8 @@ hr {
     border-radius: 5px;
     margin: 1% 0;
     border: 1px solid #a8a9ab;
-    background-color: light-dark(#f3fafa, #000000);
-    color: light-dark(#000000, #f3fafa);
+    background-color: light-dark(#fafafa, #000000);
+    color: light-dark(#000000, #fafafa);
 }
 
 #print-order-form input[type="number"], #print-order-form input[type="checkbox"]{
@@ -560,7 +560,7 @@ hr {
 }
 
 #print-order-form p{
-    color: light-dark(#000000, #f3fafa);
+    color: light-dark(#000000, #fafafa);
     font-size: 0.95rem;
     font-weight: 300;
     margin: 10px 0 5px 0;
@@ -592,8 +592,8 @@ footer {
     flex-direction: column;
     justify-content: space-evenly;
     margin: 5% 0 0 0;
-    background-color: light-dark(#f3fafa, #000000);
-    color: light-dark(#000000, #f3fafa);
+    background-color: light-dark(#fafafa, #000000);
+    color: light-dark(#000000, #fafafa);
 }
 
 .footer-top-section{
@@ -606,13 +606,13 @@ footer {
 footer a{
     display: block;
     font-weight: 300;
-    color: light-dark(#000000, #f3fafa);
+    color: light-dark(#000000, #fafafa);
     text-decoration: none;
     margin: 3% 0;
 }
 
 footer a:hover{
-    color: light-dark(#0000008a, #f3fafa6f);
+    color: light-dark(#0000008a, #fafafa6f);
 }
 
 .footer-title{
@@ -632,7 +632,7 @@ footer a:hover{
 .socials a{
     display: inline-block;
     margin: 0 10px;
-    color: light-dark(#000000, #f3fafa);
+    color: light-dark(#000000, #fafafa);
 }
 
 .copyright-p{
@@ -641,8 +641,8 @@ footer a:hover{
 }
 
 .footer-accordion-btn{
-    background-color: light-dark(#f3fafa, #000000);
-    color: light-dark(#000000, #f3fafa);
+    background-color: light-dark(#fafafa, #000000);
+    color: light-dark(#000000, #fafafa);
     border: none;
     padding: 0;
     outline: none;
@@ -659,7 +659,7 @@ footer a:hover{
     z-index: 1; /* Sit on top */
     left: 0;
     top: 0;
-    background-color: light-dark(#f3fafa, #000000);
+    background-color: light-dark(#fafafa, #000000);
     overflow-x: hidden; /* Disable horizontal scroll */
     transition: 0.3s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
 }
@@ -677,7 +677,7 @@ footer a:hover{
 .overlay a {
     padding: 8px;
     text-decoration: none;
-    color: light-dark(#000000, #f3fafa);
+    color: light-dark(#000000, #fafafa);
     display: block; /* Display block instead of inline */
     transition: 0.1s; /* Transition effects on hover (color) */
 }
@@ -868,7 +868,7 @@ footer a:hover{
     }
 
     .footer-accordion-btn:active {
-        background-color: light-dark(#f3fafaad, #000000dc);
+        background-color: light-dark(#fafafaad, #000000dc);
     }
 
     .footer-accordion-btn:after {

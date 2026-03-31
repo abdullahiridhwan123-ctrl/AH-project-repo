@@ -75,16 +75,21 @@ if (isset($_SESSION['account_loggedin'])) {
 
     <div id="login-ctn">
         <h1>Log In</h1>
-
+        <!-- The login form data will be sent to authenticate.php for processing when the user clicks the submit button -->  
         <form action="authenticate.php" method="post" class="login-form">
                 <div class="form-group">
+                    <!-- User Icon -->
                     <i class="fas fa-user form-icon-left"></i>
+                    <!-- Mandatory field: Username input -->
                     <input class="form-input" type="text" name="username" placeholder="Username" id="username" maxlength="30" required >
                 </div>
 
                 <div class="form-group mar-bot-5">
+                    <!-- Password Icon -->  
                     <i class="fas fa-user-lock form-icon-left"></i>
+                    <!-- Mandatory field: Password input -->
                     <input class="form-input" type="password" name="password" placeholder="Password" id="password" maxlength="36" required>
+                    <!-- Show Password Button with JavaScript function to toggle password visibility -->
                     <div class="show-pass-btn" onclick="showPassword()"> <i class="far fa-eye form-icon-right" id="showPass"></i> </div>
                 </div>
 
@@ -102,7 +107,7 @@ if (isset($_SESSION['account_loggedin'])) {
                 <div class="sub_btn">
                     <p>Continue with <i class="fab fa-google"></i></p>
                 </div>
-
+                <!-- The link below takes the user to the registration page if they don't have an account -->
                 <p class="register-link">Don't have an account? <a href="register.php" class="form-link">Create one</a></p>
         </form>
     </div>

@@ -42,12 +42,13 @@
     }
 
     if (empty($_POST['username']) || empty($_POST['password']) || empty($_POST['email'])) {
-        // One or more values are empty.
+        // If One or more values are empty.
         $_SESSION['error'] = $error;
         header('Location: register.php');
         exit();
     }
 
+    // ----- The code below while mainly edited by me,was taken from https://codeshack.io/secure-registration-system-php-mysql/ ----- //
     // Check if the username and email already exists
     if ($stmt = $connect->prepare('SELECT id, password FROM accounts WHERE username = ? OR email = ?')) {
         // Bind parameters (s = string, i = int, b = blob, etc)
@@ -71,6 +72,7 @@
             exit('Email is not valid!');
         }
 
+        // ----- The code below was all written by me (SCN: 241464040) ----- //
         // Check if the account exists
         if ($stmt->num_rows > 0) {
             // Username or email already exists
