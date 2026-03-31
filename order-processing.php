@@ -17,9 +17,8 @@ $con = mysqli_connect($db_host, $db_username, $db_password, $db_name);
 if (mysqli_connect_errno()) {
     exit('Failed to connect to MySQL!');
 }
-?>
 
-<?php
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // get the customer order submission encoded in the URL and make them into session variables to be used on the order confirmation page
     $_SESSION['print'] = $_POST['print'];
     $_SESSION['product'] = $_POST['product'];
@@ -27,10 +26,10 @@ if (mysqli_connect_errno()) {
     $_SESSION['size'] = $_POST['size'];
     $_SESSION['quantity'] = $_POST['quantity'];
     $_SESSION['comment'] = $_POST['customer-comment'];
-    
 
     // execute SQL query to insert values into the orders table
     $query_string = "INSERT INTO orders (print, product, colour, size, quantity, comment) VALUES ('" . $_SESSION['print'] . "', '" . $_SESSION['product'] . "', '" . $_SESSION['colour'] . "', '" . $_SESSION['size'] . "', '" . $_SESSION['quantity'] . "', '" . $_SESSION['comment'] . "')";
+    }
 
     // The query is passed to the server and the result evaluated as true if successful
     if (mysqli_query($con, $query_string))
