@@ -6,7 +6,7 @@ if (!isset($_SESSION['account_loggedin'])) {
     header('Location: login.php');
     exit;
 }
-
+// Set Database connection variables
 $db_host = 'localhost';
 $db_username = '241464040';
 $db_password = '241464040';
@@ -52,7 +52,7 @@ if (mysqli_connect_errno()) {
             <div class="nav-right-right">
                 <div class="nav-right-ctn" id="myTopnav">
                     <div class="user-icon">
-                        <a href="login.php">
+                        <a href="register.php">
                             <i class="fas fa-user fa-lg"></i>
                         </a>
                     </div>

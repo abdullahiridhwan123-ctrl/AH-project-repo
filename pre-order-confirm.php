@@ -1,9 +1,9 @@
 <?php
 // Initialize sessions
 session_start();
-// If the user is logged in, redirect to the home page
-if (isset($_SESSION['account_loggedin'])) {
-    header('Location: home.php');
+// If the user is not logged in, redirect to the login page
+if (!isset($_SESSION['account_loggedin'])) {
+    header('Location: login.php');
     exit;
 }
 ?>
@@ -28,7 +28,7 @@ if (isset($_SESSION['account_loggedin'])) {
             <div class="order-confirm-sec">
                 <i class="fas fa-crown fa-4x"></i>
                 <h1 class="title-txt">Order Confirmation</h1>
-                <p class="footer-p" style="text-align: center;">Thank you for your order <?=htmlspecialchars($_SESSION['account_name'])?>! Your receipt has been sent to your email address with an estimated delivery date.</p>
+                <p class="footer-p" style="text-align: center;">Thank you for your order <strong><?=htmlspecialchars($_SESSION['account_name'])?></strong>! Your receipt has been sent to your email address with an estimated delivery date.</p>
 
             <?php
                 // If the order submission session variable is not set or not true, redirect back to order page
@@ -37,27 +37,18 @@ if (isset($_SESSION['account_loggedin'])) {
                     exit;
                 }
                 else{
-                    // Get the order details from the session variables
-                    $print = htmlspecialchars($_SESSION['order_print']);
-                    $product = htmlspecialchars($_SESSION['order_product']);
-                    $colour = htmlspecialchars($_SESSION['order_colour']);
-                    $size = htmlspecialchars($_SESSION['order_size']);
-                    $quantity = htmlspecialchars($_SESSION['order_quantity']);
-                    $comment = htmlspecialchars($_SESSION['order_comment']);
-                }
-                // Unset the order submission session variable so that the confirmation message only appears once
-                unset($_SESSION['order_submitted']);
-                // Display the order details to the user
-                echo "<h2>Order Details:</h2>";
-                echo "<p class='footer-p'><strong>Print:</strong> $print</p>";
-                echo "<p class='footer-p'><strong>Product:</strong> $product</p>";
-                echo "<p class='footer-p'><strong>Colour:</strong> $colour</p>";
-                echo "<p class='footer-p'><strong>Size:</strong> $size</p>";
-                echo "<p class='footer-p'><strong>Quantity:</strong> $quantity</p>";
-                if (!empty($comment)) {
-                    echo "<p class='footer-p'><strong>Customer Comment:</strong> $comment</p>";
+                    // Unset the order submission session variable so that the confirmation message only appears once
+                    unset($_SESSION['order_submitted']);
                 }
             ?>
+            <!-- Display the order details to the user -->
+                    <h2>Order Details:</h2>
+                    <p class='footer-p'><strong>Print:</strong> <?=htmlspecialchars($_SESSION['print'])?> </p>
+                    <p class='footer-p'><strong>Product:</strong> <?=htmlspecialchars($_SESSION['product'])?></p>
+                    <p class='footer-p'><strong>Colour:</strong> <?=htmlspecialchars($_SESSION['colour'])?></p>
+                    <p class='footer-p'><strong>Size:</strong> <?=htmlspecialchars($_SESSION['size'])?></p>
+                    <p class='footer-p'><strong>Quantity:</strong> <?=htmlspecialchars($_SESSION['quantity'])?></p>
+                    <p class='footer-p'><strong>Customer Comment:</strong> <?=htmlspecialchars($_SESSION['comment'])?></p>
                 <button class="sub_btn_alt" type="button" onclick="location.replace('home.php')">Back to Shop</button>
             </div>
         </div>

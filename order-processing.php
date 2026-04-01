@@ -7,6 +7,7 @@ if (!isset($_SESSION['account_loggedin'])) {
     exit;
 }
 
+// Set Database connection variables
 $db_host = 'localhost';
 $db_username = '241464040';
 $db_password = '241464040';

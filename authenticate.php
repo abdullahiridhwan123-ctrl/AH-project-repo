@@ -1,6 +1,7 @@
 <?php
 //Start The Session
 session_start();
+// Set Database connection variables
 $db_host = 'localhost';
 $db_username = '241464040';
 $db_password = '241464040';
@@ -8,6 +9,7 @@ $db_name = 'phplogin';
 // Create connection to the database
 $connect = mysqli_connect($db_host, $db_username, $db_password, $db_name);
 $error = "Incorrect Username and/or Password";
+$blank_error = "Please fill both the username and password fields!";
 
 // Check for connection errors
 if (mysqli_connect_errno()) {
@@ -15,15 +17,49 @@ if (mysqli_connect_errno()) {
     exit('Failed to connect to MySQL!');
 }
 
-// Now we check if the data from the login form was submitted, isset() will check if the data exists
+// Check if the username and password POST variables are set, if not, stop the script and display an error
 if (!isset($_POST['username'], $_POST['password'])) {
     // Could not get the data that should have been sent
-    exit('Please fill both the username and password fields!');
+    $_SESSION['error'] = $blank_error;
+    // Redirect to the login page with the error message stored in the session variable to be displayed on the login page
+    header('Location: login.php');
+    exit();
+}
+
+if ($login_query = "SELECT id, password FROM accounts WHERE username = '" . $_POST['username'] . "'"){
+    $login_result = mysqli_query($connect, $login_query);
+        if (mysqli_num_rows($login_result) > 0) {
+            $row = mysqli_fetch_assoc($login_result);
+            if ($row['password'] !== null && password_verify($_POST['password'], $row['password'])) {
+                // Password is correct! User has logged in!
+                // Regenerate the session ID to prevent session fixation attacks
+                session_regenerate_id();
+                // Declare session variables (pseudo cookies for the website that are remembered on the server)
+                $_SESSION['account_loggedin'] = TRUE;
+                $_SESSION['account_name'] = $_POST['username'];
+                $_SESSION['account_id'] = $row['id'];
+                // Output success message
+                header('Location: home.php');
+                exit;
+            } else {
+                // Incorrect password
+                $_SESSION['error'] = $error;
+                // Redirect to the login page with the error message stored in the session variable to be displayed on the login page
+                header('Location: login.php');
+            }
+        } else {
+            // Incorrect username
+            $_SESSION['error'] = $error;
+            // Redirect to the login page with the error message stored in the session variable to be displayed on the login page
+            header('Location: login.php');
+        }
+    // Close the connection
+    mysqli_close($connect);
 }
 // ----- The code above was all written by me (SCN: 241464040) ----- //
 
 
-// ----- The code below while mainly edited by me,was taken from https://codeshack.io/secure-login-system-php-mysql/ ----- //
+// ----- The code below while mainly edited by me, was taken from https://codeshack.io/secure-login-system-php-mysql/ ----- //
 // Prepare our SQL, which will prevent SQL injection
 if ($stmt = $connect->prepare('SELECT id, password FROM accounts WHERE username = ?')) {
     // Bind parameters (s = string, i = int, b = blob, etc), in our case the username is a string so we use "s"
@@ -42,7 +78,7 @@ if ($stmt->num_rows > 0) {
         // Password is correct! User has logged in!
         // Regenerate the session ID to prevent session fixation attacks
         session_regenerate_id();
-        // Declare session variables (they basically act like cookies but the data is remembered on the server)
+        // Declare session variables (pseudo cookies for the website that are remembered on the server)
         $_SESSION['account_loggedin'] = TRUE;
         $_SESSION['account_name'] = $_POST['username'];
         $_SESSION['account_id'] = $id;

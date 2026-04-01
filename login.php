@@ -41,7 +41,7 @@ if (isset($_SESSION['account_loggedin'])) {
             <div class="nav-right-right" style="display: none;">
                 <div class="nav-right-ctn" id="myTopnav">
                     <div class="user-icon">
-                        <a href="login.php">
+                        <a href="register.php">
                             <i class="fas fa-user fa-lg"></i>
                         </a>
                     </div>
@@ -94,16 +94,19 @@ if (isset($_SESSION['account_loggedin'])) {
                 </div>
 
                 <?php
+                    // If the processing php file encounters and sends any errors, display the error message as a span in the form
                     if(isset($_SESSION["error"])){
                         $error = $_SESSION["error"];
-                        echo "<span style='color:red; text-align:center; font-size:0.9rem;'>$error</span>";
+                        echo "<span id='error_span' style='color:red; text-align:center; font-size:0.9rem;'>$error</span>";
                     }
                 ?>  
                 
+                <!-- Submit button -->
                 <button class="sub_btn" type="submit">Login</button>
 
                 <p class="register-link" style="padding: 0 0;"> OR </p>
 
+                <!-- Google login button (not functional, just for display purposes) -->
                 <div class="sub_btn">
                     <p>Continue with <i class="fab fa-google"></i></p>
                 </div>
@@ -117,5 +120,6 @@ if (isset($_SESSION['account_loggedin'])) {
 </html>
 
 <?php
+// Unset the error message in the session after it has been displayed to prevent it from showing if page is reloaded
     unset($_SESSION["error"]);
 ?>

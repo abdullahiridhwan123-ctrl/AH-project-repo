@@ -19,6 +19,7 @@
 <?php
     //Start The Session
     session_start();
+    // Set Database connection variables
     $db_host = 'localhost';
     $db_username = '241464040';
     $db_password = '241464040';
@@ -37,6 +38,7 @@
     if (!isset($_POST['username'], $_POST['password'], $_POST['email'])) {
         // Could not get the data that should have been sent
         $_SESSION['error'] = $error;
+        // Redirect to the register page with the error message stored in the session variable to be displayed on the register page
         header('Location: register.php');
         exit();
     }
@@ -44,9 +46,23 @@
     if (empty($_POST['username']) || empty($_POST['password']) || empty($_POST['email'])) {
         // If One or more values are empty.
         $_SESSION['error'] = $error;
+        // Redirect to the register page with the error message stored in the session variable to be displayed on the register page
         header('Location: register.php');
         exit();
     }
+
+    if ($query = "SELECT id FROM accounts WHERE username = '" . $_POST['username'] . "' OR email = '" . $_POST['email'] . "'") {
+        $result = mysqli_query($connect, $query);
+        if (mysqli_num_rows($result) > 0) {
+            // Username or email already exists
+            $_SESSION['error'] = $error_username;
+            // Redirect to the register page with the error message stored in the session variable to be displayed on the register page
+            header('Location: register.php');
+            exit();
+        }
+    }
+
+    // ----- The code above was all written by me (SCN: 241464040) ----- //
 
     // ----- The code below while mainly edited by me,was taken from https://codeshack.io/secure-registration-system-php-mysql/ ----- //
     // Check if the username and email already exists
@@ -72,14 +88,15 @@
             exit('Email is not valid!');
         }
 
-        // ----- The code below was all written by me (SCN: 241464040) ----- //
         // Check if the account exists
         if ($stmt->num_rows > 0) {
             // Username or email already exists
             $_SESSION['error'] = $error_username;
+            // Redirect to the register page with the error message stored in the session variable to be displayed on the register page
             header('Location: register.php');
             exit();
         }
+
         else {
             // Declare variables
             $registered = date('Y-m-d H:i:s');

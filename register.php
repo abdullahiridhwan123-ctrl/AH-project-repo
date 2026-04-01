@@ -37,7 +37,7 @@ session_start();
             <div class="nav-right-right" style="display: none;">
                 <div class="nav-right-ctn" id="myTopnav">
                     <div class="user-icon">
-                        <a href="login.php">
+                        <a href="register.php">
                             <i class="fas fa-user fa-lg"></i>
                         </a>
                     </div>
@@ -104,10 +104,12 @@ session_start();
                     }
                 ?>
                 
+                <!-- Submit button -->
                 <button class="sub_btn" type="submit">Register</button>
 
                 <p class="register-link" style="padding: 0 0;"> OR </p>
 
+                <!-- Google sign in button (not functional, just for display purposes) -->
                 <div class="sub_btn">
                     <p>Continue with <i class="fab fa-google"></i></p>
                 </div>
@@ -121,6 +123,6 @@ session_start();
 </html>
 
 <?php
-// Unload the error from the processing file
+// Unset the error message in the session after it has been displayed to prevent it from showing if page is reloaded
     unset($_SESSION["error"]);
 ?>
